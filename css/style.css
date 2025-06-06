@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Patrick Hand", cursive;
+}
+
+body {
+  background-image: url("../img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+#todo-wrapper {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background: transparent;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Contenedor input + botón */
+#todo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input */
+#task-input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+  color: white;
+}
+
+#task-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Botones */
+#add-task,
+.filter-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task:hover,
+.filter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Lista de tareas */
+#todo-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+/* Cada tarea */
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+  color: white;
+  animation: fadeIn 0.3s ease;
+  cursor: pointer;
+}
+
+/* Tarea completada */
+.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 2px #fff;
+}
+
+/* Botón borrar */
+.delete-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Contenedor de filtros */
+#filter-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

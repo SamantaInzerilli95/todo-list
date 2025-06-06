@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do List</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="todo-wrapper">
+      <h1>Mi Lista de Tareas</h1>
+
+      <div id="todo-container">
+        <input id="task-input" type="text" placeholder="Escribe una tarea..." />
+        <button id="add-task">Añadir</button>
+      </div>
+
+      <ul id="todo-list"></ul>
+
+      <div id="filter-container">
+        <button class="filter-btn" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pending">Pendientes</button>
+        <button class="filter-btn" data-filter="completed">Completadas</button>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
